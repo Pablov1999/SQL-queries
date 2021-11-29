@@ -50,3 +50,40 @@ Where country='mexico';
 Update customers
 set city='progachev'
 where country='Germany';
+
+
+Select top 3 From customers
+where country='mexico';
+
+
+SELECT MIN(Price) AS SmallestPrice
+FROM Products;
+
+Select count(rowofthetable)
+from table1
+where country='germany';
+ 
+Select avg (row1)
+from table1$
+
+select sum(row2)
+from table1
+
+/* LIKE operator to find letter*/
+
+Select * from table1
+where column1='a&' /*started with a*/
+
+Select * from table1
+where column1='&a&' /*a in any position*/
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE '_r%'; /* r second position*/
+
+SELECT * FROM Customers
+WHERE Address LIKE '_r%' AND CustomerName LIKE 'a%';/*combine operators AND LIKE*/
+
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a__________________%'; /*starts with a and lasts 10 char*/
+
+

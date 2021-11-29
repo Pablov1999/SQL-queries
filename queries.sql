@@ -31,3 +31,22 @@ order by city desc;
 
 select * from table1
 order by country asc, name desc;
+
+
+insert into table1 (column1, column2)
+values (value1, value2);
+
+/* написать SQL скрипт, который вставит новую запись в таблицу
+CustomerName = “A”, ContactName = “B”, Address = ”C”, City = “D”, Country = “E”*/
+
+INSERT INTO Table1 (CustomerName, ContactName, Address, City, Country)
+VALUES ('A', 'B', 'C', 'D', 'E');
+
+Update Table1
+set column1='123', column2 = '12331'
+Where country='mexico';
+
+
+Update customers
+set city='progachev'
+where country='Germany';

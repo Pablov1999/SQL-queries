@@ -87,3 +87,30 @@ SELECT * FROM Customers
 WHERE CustomerName LIKE 'a__________________%'; /*starts with a and lasts 10 char*/
 
 
+/*Joins*/
+select column1 from table1
+INNER JOIN table2 
+on table1.column1 = table2.column1;
+/* triple join*/
+Select orders.orderID, customers.customername
+from orders
+INNER JOIN customers
+ON orders.customerID = customers.customerID;
+
+SELECT Orders.OrderID, Employees.LastName, Employees.FirstName
+FROM Orders
+RIGHT JOIN Employees
+ON Orders.EmployeeID = Employees.EmployeeID
+ORDER BY Orders.OrderID;
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+/*self join*/
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM Customers A, Customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+
